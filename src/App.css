@@ -1,38 +1,362 @@
-.App {
-  text-align: center;
+
+.form_holster{
+    width: 70%;
+    height: auto;
+}
+.error_message{
+    visibility: visible;
+    height: auto;
+    width: 102%;
+    background-color: #A41E22;
+    color: white;
+    font-size: 0.8rem;
+    font-family: monospace;
+	border-radius: 1rem;
+}
+.global_error{
+    font-size: 0.75rem;
+    text-align: center;
+}
+/* ? SECTION STYLING */
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.title_section{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #240115;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
+.title{
+    font-size: 4vh;
+    font-family: Kadwa;
+    color:#FFC526;
+}
+.fieldset{
+    margin-top: 2%;
+    background-color: #FFC526;
+    background-image: url(./images/background.png);
+    background-size: 100%;
+
+    border: 0rem;
+    border-radius: 1rem;
+    padding: 1rem 2.2vw;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+.form_category{
+    width: 100%;
+    min-height: 12vh;
+    /* margin: 0.5rem 0rem; */
+}
+#submit_button{
+    width: 12rem;
+    height: 8vh;
+    font-family: Kadwa;
+    font-size: 4vh;
+    background-color: transparent;
+    color: #240115;
+    border: none;
+    border-bottom: 0.5rem solid #240115;
+    border-radius: 1rem;
+
+}
+#submit_button:hover{
+    width: 12rem;
+    height: 8vh;
+    font-family: Kadwa;
+    font-size: 4vh;
+    background-color: #240115;
+    color: #FFC526;
+    border-bottom: 0.5rem solid #A41E22;
+    border-radius: 1rem;
+    outline: none;
+}
+.submit_section{
+    text-align: center;
+}
+.name_section{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap:3rem;
+}
+.name_holster{
+    width: 100%;
+}
+.main_address_section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* background-color: #240115; */
+    color:#FFC526;
+    border-radius: 1rem;
+}
+.terms_section{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+}
+.terms_statement{
+    display: none;
+    overflow: scroll;
+    height: 30vh;
+    padding: 1rem;
+    border: 0.1rem solid red;
+}
+.dob_section{
+    width: 30%;
+}
+.physical_address_section{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+}
+.physical_address_input{
+    width: 50%;
+}
+.geo_address_section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+.geo_address_city{
+    width: 40%;
+}
+.geo_address_province{
+    width: 20%;
+}
+.geo_address_country{
+    width: 30%;
+}
+.rules_reg{
+    background-color: #240115;
+    /* color: white; */
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;	
+    border-radius: 0.25rem;
+}
+.checkbox{
+    width: 5%;
+    background-color: #FFC526;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+}
+.rules_statement{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* color:#FFC526; */
+
+}
+.conditions{
+    text-align: center;
+    border-radius: 0.25rem;
+	font-size: 0.95rem;
+}
+.consent_title{
+	color: #240115;
+}
+/* ? SECTION STYLING */
+
+/* ? INPUT SYLING*/
+input{
+    width: 100%;
+    height:5vh;
+    border-radius: 0.35rem;
+    border: 0rem solid rgb(1, 1, 63);
+    /* background-color:#240115; */
+    background-color: transparent;
+
+    font-family: Kadwa;
+    font-size: 1.15rem;
+    color: white;
+    padding-left: 1rem;
+
+    border-bottom: 0.25rem solid #240115;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type=checkbox]{
+    width: 1.25vw;
+    background-color: #240115;
 }
+input:focus{
+    border: 0rem solid rgb(1, 1, 63);
+    background-color:white;
+    outline: none;
+    color: #240115;
+}
+input:hover{
+    /* background-color: #c83e4d; */
+    background-color: #A41E22;
+    opacity: 0.5;
+    /* border: 0.001rem solid rgb(63, 1, 1); */
+}
+/* input:active{
+    background-color: lightpink;
+    border: 0.1rem solid rgb(63, 1, 1);
+} */
+label{
+    font-family: KadwaBold;
+    color: #240115;
+}
+select{
+    width: 100%;
+    height:5vh;
+    border-radius: 0.25rem;
+    border: 0rem solid rgb(1, 1, 63);
+    background-color:#240115;
+    color: white;
+}
+/* option{
+    width: 100%;
+    height:3vh;
+    border-radius: 0.25rem;
+    border: 0.1rem solid rgb(1, 1, 63);
+    background-color: rgb(213, 245, 255);
+} */
+#viewTerms{
+    text-align: center;
+}
+.terms_button{
+    margin-left: 98%;
+}
+/* ? INPUT SYLING */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* ? MOBILE STYLING */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+@media screen and (max-width:780px) {
+	.error_message{
+		visibility: visible;
+		height: auto;
+		width: 92%;
+		background-color: #A41E22;
+		color: white;
+		font-size: 0.8rem;
+		font-family: monospace;
+		border-radius: 1rem;
+	}
+    input{
+        width: 90%;
+        height:5vh;
+        border-radius: 0rem;
+        border: 0rem solid rgb(1, 1, 63);
+        /* background-color:#240115; */
+        background-color: transparent;
+    
+        font-family: Kadwa;
+        font-size: 1.15rem;
+        color: white;
+        padding-left: 1rem;
+    
+        border-bottom: 0.25rem solid #240115;
+    }
+	select{
+		width: 100%;
+		height:3vh;
+		border-radius: 0.25rem;
+		border: 0rem solid rgb(1, 1, 63);
+		background-color:#240115;
+		color: white;
+	}
+    .form_holster{
+        /* margin: 0 auto; */
+        width: 100%;
+        height: auto;
+    }
 
-.App-link {
-  color: #61dafb;
-}
+    .name_section{
+        display: flex;
+        flex-direction: column;
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    .dob_section{
+        width: 100%;
+    }
+    .physical_address_section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .physical_address_input{
+        width: 100%;
+    }
+    .geo_address_section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .geo_address_city{
+        width: 100%;
+    }
+    .geo_address_province{
+        width: 50%;
+    }
+    .geo_address_country{
+        width: 50%;
+    }
+    .consent_title{
+        text-align: center;
+    }
+    .checkbox{
+        width: 7.5%;
+        background-color: #FFC526;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    input[type=checkbox]{
+        width: 5vw;
+        background-color: #240115;
+    }
+    .conditions{
+        font-size: 0.65rem;
+    }
+    #submit_button{
+		width: 12rem;
+		height: 8vh;
+		font-family: Kadwa;
+		font-size: 4vh;
+		background-color: transparent;
+		color: #240115;
+		border: none;
+		border-bottom: 0.5rem solid #240115;
+		border-radius: 1rem;
+	
+	}
+	#submit_button:hover{
+		width: 12rem;
+		height: 8vh;
+		font-family: Kadwa;
+		font-size: 4vh;
+		background-color: #240115;
+		color: #FFC526;
+		border-bottom: 0.5rem solid #A41E22;
+		border-radius: 1rem;
+		outline: none;
+	}
 }
+/* ? MOBILE STYLING */
