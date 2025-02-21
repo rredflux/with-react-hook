@@ -137,7 +137,7 @@
                                 <label htmlFor="address">Street Address:</label>
                                 <input {...register("address",{ 
 									required: true,
-									pattern: /^[a-zA-Z]+$/i
+									pattern: /^[a-zA-Z\s]*$/i
 								})} type="text" name="address" id="address" placeholder="Data Boulevard" />
 								{errors.address && <p className="error_message">Please enter valid address</p>}
 								{/* <p id="address_error" className="error_message">error message</p> */}
